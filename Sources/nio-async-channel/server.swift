@@ -77,7 +77,7 @@ final class HTTPServer<Responder: HTTPResponder>: Sendable {
     }
 
     public func run() async throws {
-        let port = 8082
+        let port = 8081
         let channel = try await ServerBootstrap(group: eventLoopGroup)
             .bind(host: "127.0.0.1", port: port) { channel in
                 return channel.eventLoop.makeCompletedFuture {

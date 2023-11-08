@@ -79,7 +79,7 @@ final class HTTPServer<Responder: HTTPResponder>: Sendable {
                 }
             }
         do {
-            let port = 8082
+            let port = 8081
             let channel = try bootstrap.bind(host: "127.0.0.1", port: port).wait()
             print("Server running on port: \(port)")
             try channel.closeFuture.wait()
